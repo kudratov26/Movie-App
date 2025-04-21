@@ -19,7 +19,11 @@ export default function Index() {
     error: trendingError,
   } = useFetch(getTrendingMovies);
 
-  const { data: movies, loading: moviesLoading, error: moviesError } = useFetch(() => fetchMovies({ query: "" }));
+  const {
+    data: movies,
+    loading: moviesLoading,
+    error: moviesError
+  } = useFetch(() => fetchMovies({ query: "" }));
   return (
     <View className="flex-1 bg-primary">
       <Image source={images.bg} className="absolute w-full" />
